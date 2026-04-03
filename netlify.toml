@@ -1,0 +1,26 @@
+# 路由重定向，解决SPA 404
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 强制正确MIME类型，解决JS报错
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css; charset=utf-8"
+
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+
+# 关键：Vite项目必须指定打包目录为dist
+[build]
+  command = "npm run build"
+  publish = "dist"
