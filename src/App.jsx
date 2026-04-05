@@ -648,19 +648,12 @@ ${backendDeployRequirement}
               ))}
             </div>
             <div className="home-content">
-              <p className="badge">AI POWERED SQL ENGINE</p>
-              <h1>智能数据库建模中枢</h1>
+              <p className="badge">AI POWERED ENGINE FOR DEVELOPER</p>
+              <h1>智能开发平台</h1>
               <p className="typing-text">DeepSeek Cognitive Core: online and ready.</p>
               <p className="home-desc">
-                结合 DeepSeek 大模型，输入业务语义即可生成高质量建表语句，
-                支持多数据库类型、智能字段建议、历史复用与极速复制。
+                deepSeek+cursor 智能开发平台。
               </p>
-              <p className="home-submenu-count">当前可用子菜单：{menuItems.length} 个</p>
-              <div className="home-actions">
-                <button type="button" onClick={() => selectMenu(menuItems[0].key)}>
-                  立即开始生成
-                </button>
-              </div>
               <div className="home-menu-grid">
                 {menuItems.map((item) => (
                   <button
